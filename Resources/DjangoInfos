@@ -1,0 +1,58 @@
+
+
+Creating Project:
+    django-admin startproject __name__
+
+Running server:
+    python manage.py runserver
+        running on different port :
+            runserver port_nr
+
+Starting application:
+    python manage.py startapp name_of_application
+
+
+Application files:
+    views.py:
+        File which contains views of application
+        Showing staffs on website
+
+    urls.py:
+        File which contains routing urls to different views
+    models.py:
+        Database model with attributes
+
+    We create a new view:
+        Link it to application urls.py
+            And links the urls.py into project urls.py
+
+
+Settings server:
+    Telling DJango that we have another application
+    INSTALLED_APPS list
+
+SQLite Database:
+    python manage.py migrate:
+        after updating settings.py - make new changes into a project
+
+    After creating new models or updating it we need to use command:
+        Create change of models:
+            python manage.py makemigrations name_of_application
+        Applying this change:
+            python manage.py migrate:
+
+        Adding to database:
+            python manage.py shell - go to sql shell
+            from main_application.models import OurModels
+                Creating objects:
+                    T = ourModel(value)
+                    t.save()
+                    ourModel.objects.all() -- getting all objects in table
+
+Admin dashboard:
+    Creating admin account:
+        -- createsuperuser
+    golo | asd
+    /admin - route
+
+    Next register our models in admin.py
