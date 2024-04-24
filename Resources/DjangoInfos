@@ -56,3 +56,24 @@ Admin dashboard:
     /admin - route
 
     Next register our models in admin.py
+
+Adding HTML templates:
+    {% extends %} - django syntax
+    views:
+        return render(response, 'main_application/base.html', {})
+     {{  }} -- variable syntax
+     {% python code %}
+
+Checkboxes:
+    pole value jest przesyłane do serwera
+      <input type="checkbox" value="clicked" name="c{{item.id}}"
+      tworzy się słownik::
+        name = value
+        c1 = clicked
+Buttons:
+    pole value jest przesyłane
+    <button type="submit" name="newItem" value="newItem">
+    tworzy się słownik:
+        na
+Input:
+    pole name jest przesyłane
